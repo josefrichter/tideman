@@ -105,12 +105,26 @@ export default function App() {
         <h4>Pairs</h4>
         {/* {JSON.stringify(pairs).replace(/"/g, "")} */}
         {pairs.map(p => "(" + p.winner + ", " + p.loser + ")  ")}
-        {/* <p>Note: unlike in cs50, strength is added directly to each pair</p> */}
       </div>
       <div>
         <h4>Sorted Pairs</h4>
         {/* {JSON.stringify(sortedPairs).replace(/"/g, "")} */}
         {sortedPairs.map(p => "(" + p.winner + ", " + p.loser + ")  ")}
+        <br />
+        <div
+          style={{
+            fontSize: "0.6em",
+            lineHeight: "120%",
+            width: "60%",
+            padding: "0 20%",
+            textAlign: "center"
+          }}
+        >
+          Important: your sorted pairs may look slightly different, depending on
+          sorting method you applied, because tied pairs are actually not
+          sorted, as per problem specification.
+        </div>
+        <br />
       </div>
       <div>
         <h4>Locked matrix</h4>
