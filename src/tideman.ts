@@ -8,7 +8,6 @@ I even used C-style snake_case instead of usual TS camelCase
 to make the code as similar as possible (in this file)
 
 */
-
 import { names } from "./VoterForm";
 
 // type (similar to struct in C)
@@ -82,9 +81,6 @@ export function create_pairs(preferences: number[][]): Pair[] {
   const size: number = preferences.length; // rectangular matrix
   for (let i = 0; i < size; i++) {
     for (let j = 0; j < size; j++) {
-      // TODO Where the majorities are equal,
-      // the majority with the smaller minority opposition
-      // is ranked first.
       const strength = preferences[i][j] - preferences[j][i];
       if (strength > 0) {
         // create pair
