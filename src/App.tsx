@@ -125,11 +125,7 @@ export default function App() {
           Brought to you by&nbsp;
           <a href="https://www.iphonedesign.info/about">Josef Richter</a>
           <br />
-          Created with React & TypeScript in Codesandbox.io (
-          <a href="https://codesandbox.io/s/tideman-ib0i4?file=/src/tideman.ts">
-            source
-          </a>
-          )
+          Created with React & TypeScript in Codesandbox.io
         </p>
         <p>
           See&nbsp;
