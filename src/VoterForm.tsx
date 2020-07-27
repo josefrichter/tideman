@@ -10,16 +10,14 @@ export const names: string[] = [
   "Geena",
   "Henry",
   "Indira"
-]; // some predefined same. NOT cs50
+]; // some predefined names. NOT cs50
 
 export default function VoterForm(props: any) {
   let ranks = props.ranks;
 
   let handleChange = (rank: number, newVal: number) => {
-    // console.log("handling change:", index, newVal);
     let ranksCopy = [...ranks]; // copy
     const currentIndexOfNewVal = ranks.indexOf(newVal);
-    // ranks[rank] = newVal;
     [ranksCopy[rank], ranksCopy[currentIndexOfNewVal]] = [
       ranksCopy[currentIndexOfNewVal],
       ranksCopy[rank]
