@@ -1,0 +1,22 @@
+.App {
+  font-family: "SF Mono", "Fira Code", "Roboto Mono", monospace;
+  text-align: center;
+}
+
+table,
+td {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 5px 10px;
+  text-align: center;
+}
+
+select {
+  padding: 3px;
+  font-size: 1.1em;
+  margin: 2px;
+  /* width: 100px; */
+}

@@ -1,0 +1,31 @@
+{
+  "name": "tideman",
+  "version": "1.0.0",
+  "description": "testing page for Harvard's CS50 Tideman problem. See https://cs50.harvard.edu/x/2020/psets/3/tideman/\n\nThe solution for cs50 needs to be done in C language. This testing suite is done in TypeScript, trying to closely copy the prescribed structure from cs50.",
+  "keywords": [
+    "cs50",
+    "brian yu",
+    "harvard",
+    "tideman",
+    "typescript",
+    "david malan"
+  ],
+  "main": "src/index.tsx",
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-scripts": "3.3.0"
+  },
+  "devDependencies": {
+    "@types/react": "16.9.19",
+    "@types/react-dom": "16.9.5",
+    "typescript": "3.7.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"]
+}
