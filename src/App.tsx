@@ -63,15 +63,13 @@ export default function App() {
       <h3>Start editing to see some magic happen!</h3>
       <br />
       <div
-        style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
-      >
+        style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
         <div style={{ maxWidth: "250px", margin: "10px" }}>
           <label>
             Candidate&nbsp;count:&nbsp;
             <select
               value={votersXranks[0].length}
-              onChange={handleNoOfCandidatesInput}
-            >
+              onChange={handleNoOfCandidatesInput}>
               {Array.from(Array(8).keys()).map(k => (
                 <option value={k + 2}>{k + 2}</option>
               ))}
@@ -84,8 +82,7 @@ export default function App() {
             Voters&nbsp;count:&nbsp;
             <select
               value={votersXranks.length}
-              onChange={handleNoOfVotersInput}
-            >
+              onChange={handleNoOfVotersInput}>
               {Array.from(Array(8).keys()).map(k => (
                 <option value={k + 2}>{k + 2}</option>
               ))}
@@ -96,8 +93,7 @@ export default function App() {
       <br />
       <br />
       <div
-        style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
-      >
+        style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
         {voterForms}
       </div>
       {/* <div>{JSON.stringify(votersXranks)}</div> */}
@@ -126,8 +122,7 @@ export default function App() {
             width: "60%",
             padding: "0 20%",
             textAlign: "center"
-          }}
-        >
+          }}>
           Important: your sorted pairs may look slightly different, depending on
           sorting method you applied, because tied pairs are actually not
           sorted, as per problem specification.
