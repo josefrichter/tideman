@@ -62,29 +62,37 @@ export default function App() {
       <h1>Tideman Testing</h1>
       <h3>Start editing to see some magic happen!</h3>
       <br />
-      <label>
-        Candidate count:&nbsp;
-        <input
-          type="number"
-          onChange={handleNoOfCandidatesInput}
-          value={votersXranks[0].length}
-          min={2}
-          max={9}
-          style={{ fontSize: "1em", padding: "5px" }}
-        />
-      </label>
-      &emsp;&emsp;
-      <label>
-        Voters count:&nbsp;
-        <input
-          type="number"
-          onChange={handleNoOfVotersInput}
-          value={votersXranks.length}
-          min={1}
-          max={9}
-          style={{ fontSize: "1em", padding: "5px" }}
-        />
-      </label>
+      <div
+        style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
+      >
+        <div style={{ maxWidth: "250px", margin: "10px" }}>
+          <label>
+            Candidate&nbsp;count:&nbsp;
+            <select
+              value={votersXranks[0].length}
+              onChange={handleNoOfCandidatesInput}
+            >
+              {Array.from(Array(8).keys()).map(k => (
+                <option value={k + 2}>{k + 2}</option>
+              ))}
+            </select>
+          </label>
+        </div>
+
+        <div style={{ maxWidth: "250px", margin: "10px" }}>
+          <label>
+            Voters&nbsp;count:&nbsp;
+            <select
+              value={votersXranks.length}
+              onChange={handleNoOfVotersInput}
+            >
+              {Array.from(Array(8).keys()).map(k => (
+                <option value={k + 2}>{k + 2}</option>
+              ))}
+            </select>
+          </label>
+        </div>
+      </div>
       <br />
       <br />
       <div
