@@ -19,3 +19,19 @@ select {
   font-size: 1.1em;
   margin: 2px;
 }
+
+.Note {
+  font-size: 0.6em;
+  line-height: 120%;
+  width: 60%;
+  padding: 0 20%;
+  text-align: center;
+}
+
+.TestData {
+  margin: 0 auto;
+  padding: 5px;
+  text-align: left;
+  max-width: 150px;
+  border: 1px solid #ccc;
+}

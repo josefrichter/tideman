@@ -11,6 +11,7 @@ import {
   lock_pairs,
   print_winner
 } from "./tideman";
+import { create_command, create_test_data } from "./testdata";
 
 export default function App() {
   const [votersXranks, setVotersXranks] = React.useState(
@@ -23,6 +24,9 @@ export default function App() {
   const sortedPairs = sort_pairs(pairs);
   const locked = lock_pairs(sortedPairs, votersXranks[0].length);
   const winner = print_winner(locked);
+
+  const testCommand = create_command(votersXranks);
+  const testData = create_test_data(votersXranks);
 
   // event handlers
   const handleNoOfCandidatesInput = (event: any) => {
@@ -115,14 +119,7 @@ export default function App() {
         {/* {JSON.stringify(sortedPairs).replace(/"/g, "")} */}
         {sortedPairs.map(p => "(" + p.winner + ", " + p.loser + ")  ")}
         <br />
-        <div
-          style={{
-            fontSize: "0.6em",
-            lineHeight: "120%",
-            width: "60%",
-            padding: "0 20%",
-            textAlign: "center"
-          }}>
+        <div className="Note">
           Important: your sorted pairs may look slightly different, depending on
           sorting method you applied, because tied pairs are actually not
           sorted, as per problem specification.
@@ -137,6 +134,19 @@ export default function App() {
         <h4>Winner</h4>
         <h1>{winner}</h1>
       </div>
+      <div>
+        <h4>Testing in cs50 IDE</h4>
+        <div className="Note">
+          Copy the below into a file <b>data.txt</b> (including the last
+          line-break character!)
+        </div>
+        <br />
+        <pre className="TestData">{testData}</pre>
+        <br />
+        <div className="Note">and then run the following command</div>
+        <pre>{testCommand}</pre>
+      </div>
+      <br />
       <div>
         <p>
           Brought to you by&nbsp;
