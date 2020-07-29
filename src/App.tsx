@@ -14,6 +14,7 @@ import {
 import { create_command, create_test_data } from "./testdata";
 import { create_nodes, create_edges } from "./graph";
 
+// @ts-ignore
 import Graph from "react-graph-vis";
 
 export default function App() {
