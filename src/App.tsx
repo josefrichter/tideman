@@ -12,6 +12,9 @@ import {
   print_winner
 } from "./tideman";
 import { create_command, create_test_data } from "./testdata";
+import { create_nodes, create_edges } from "./graph";
+
+import Graph from "react-graph-vis";
 
 export default function App() {
   const [votersXranks, setVotersXranks] = React.useState(
@@ -25,6 +28,30 @@ export default function App() {
   const locked = lock_pairs(sortedPairs, votersXranks[0].length);
   const winner = print_winner(locked);
 
+  const graph = {
+    nodes: create_nodes(votersXranks[0].length),
+    edges: create_edges(sortedPairs, votersXranks[0].length)
+  };
+  const graphOptions = {
+    layout: {
+      hierarchical: false
+    },
+    physics: {
+      enabled: true,
+      barnesHut: {
+        theta: 0.5,
+        gravitationalConstant: -20000,
+        centralGravity: 0.8,
+        springLength: 95,
+        springConstant: 0.04,
+        damping: 0.09,
+        avoidOverlap: 0
+      }
+    },
+    edges: {
+      smooth: true
+    }
+  };
   const testCommand = create_command(votersXranks);
   const testData = create_test_data(votersXranks);
 
@@ -133,6 +160,27 @@ export default function App() {
       <div>
         <h4>Winner</h4>
         <h1>{winner}</h1>
+      </div>
+      <div>
+        <h4>Graph</h4>
+        <div className="Note">
+          Red edges *not* locked, because they would create circle. Graph is
+          interactive&hellip;
+        </div>
+        {/* <div>{JSON.stringify(graph)}</div> */}
+        {/* <Graph graph={graph} options={options} events={events} style={{ height: "640px" }} /> */}
+        <div>
+          <Graph
+            graph={graph}
+            options={graphOptions}
+            style={{
+              height: "500px",
+              maxWidth: "500px",
+              margin: "0 auto",
+              border: "1px solid #ccc"
+            }}
+          />
+        </div>
       </div>
       <div>
         <h4>Testing in cs50 IDE</h4>
