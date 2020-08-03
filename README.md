@@ -1,4 +1,4 @@
-#Tideman Testing Application
+# Tideman Testing Application
 
 A single-page app that lets you model various combinations for the Tideman problem and review results of the individual steps of the algorithm. The purpose of the application is to allow testing your own implementation in C.
 
