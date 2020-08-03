@@ -11,7 +11,11 @@ import {
   lock_pairs,
   print_winner
 } from "./tideman";
-import { create_command, create_test_data } from "./testdata";
+import {
+  create_command,
+  create_test_data,
+  create_random_ranks_matrix
+} from "./testdata";
 import { create_nodes, create_edges } from "./graph";
 
 // @ts-ignore
@@ -95,13 +99,15 @@ export default function App() {
       <h3>Start editing to see some magic happen!</h3>
       <br />
       <div
-        style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
+        style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
+      >
         <div style={{ maxWidth: "250px", margin: "10px" }}>
           <label>
             Candidate&nbsp;count:&nbsp;
             <select
               value={votersXranks[0].length}
-              onChange={handleNoOfCandidatesInput}>
+              onChange={handleNoOfCandidatesInput}
+            >
               {Array.from(Array(8).keys()).map(k => (
                 <option value={k + 2}>{k + 2}</option>
               ))}
@@ -114,7 +120,8 @@ export default function App() {
             Voters&nbsp;count:&nbsp;
             <select
               value={votersXranks.length}
-              onChange={handleNoOfVotersInput}>
+              onChange={handleNoOfVotersInput}
+            >
               {Array.from(Array(8).keys()).map(k => (
                 <option value={k + 2}>{k + 2}</option>
               ))}
@@ -123,9 +130,15 @@ export default function App() {
         </div>
       </div>
       <br />
+      <div>
+        <button onClick={() => setVotersXranks(create_random_ranks_matrix())}>
+          Randomize
+        </button>
+      </div>
       <br />
       <div
-        style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
+        style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
+      >
         {voterForms}
       </div>
       {/* <div>{JSON.stringify(votersXranks)}</div> */}
