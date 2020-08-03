@@ -181,6 +181,7 @@ export default function App() {
           Red edges *not* locked, because they would create circle. Graph is
           interactive&hellip;
         </div>
+        <br />
         {/* <div>{JSON.stringify(graph)}</div> */}
         {/* <Graph graph={graph} options={options} events={events} style={{ height: "640px" }} /> */}
         <div>
