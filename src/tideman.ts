@@ -3,7 +3,7 @@
 SPOILER ALERT!
 this file contains the solutions to cs50!
 
-typescript is pretty similar to C (even copy-pasted some code)
+typescript has pretty similar syntax to C (even copy-pasted some code)
 I even used C-style snake_case instead of usual TS camelCase
 to make the code as similar as possible (in this file)
 
