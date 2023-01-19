@@ -213,7 +213,7 @@ export default function App() {
       <div>
         <p>
           Brought to you by&nbsp;
-          <a href="https://www.iphonedesign.info/about">Josef Richter</a>
+          <a href="https://josefrichter.design">Josef Richter</a>
           <br />
           Created with React & TypeScript in Codesandbox.io
         </p>
