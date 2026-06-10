@@ -125,7 +125,7 @@ export function can_reach_from_to(
 }
 
 export function sort_pairs(pairs: Pair[]): Pair[] {
-  return pairs.sort(function(a, b) {
+  return [...pairs].sort(function(a, b) {
     let x = b.strength - a.strength;
     // return x === 0 ? a.minority - b.minority : x; // order by minority too?
     return x;
